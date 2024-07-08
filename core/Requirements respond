@@ -1,0 +1,280 @@
+Under the tab: "RefLink History" Mirza will see 2 tables:
+1. a table informing about the earnings from the title Mirza received for the purchase of ZDB Currency by Adam.
+In the table information:
+- Date of salary received
+- First Name
+- Salary
+Example of the table:
+19.03.2024 | Adam | 10 ZDB
+
+2 The table informing about the salary of the title Mirza will receive for a job well done by Adam.
+In the table information:
+- Date of salary received
+- First Name
+- Remuneration
+Example of the table:
+19.03.2024 | Adam | 10 ZDB.
+(DONE)
+
+
+
+
+
+1. for now, I don't have money to buy a script to send SMS. I will ask you to configure SMS when I buy the script.
+
+2. ability to hide selected categories and job - visible only after
+login
+
+Hiding categories works well, however, after hiding the APP category, tasks are still visible. (img1)
+https://nowy.zlecenio.eu/job/list
+
+5.
+
+5 User ratings.
+
+Example:
+1.Mirza added a task.
+2.Luke has completed the task.
+3.Mirza on the accept or reject page of the task has the ability to write a rating for Luke and choose from 1 to 5 stars.
+https://nowy.zlecenio.eu/user/job/details/13
+(img2)
+
+The rating that Mirza wrote is displayed on Luke's user profile.
+
+Luke can respond to the posted rating only 1 time.
+To do so Luke enters his rating profile.
+(img2a)
+
+Luke has the opportunity to rate user Mirza, to do so he must go to Apply Jobs - https://nowy.zlecenio.eu/user/job/apply
+(img3)
+
+
+Mirza can reply to an evaluation written by Luke (img2a)
+
+All users can read the ratings and sort by the number of stars and by the ratings received for completing the job and for adding the job.
+
+The link to the ratings is located next to the user's profile
+(img4)
+
+And on the acceptance card (img2)
+
+And on the tab of displayed users:
+(I disabled this tab in the admin panel)
+https://script.viserlab.com/microlab/
+(img5)
+
+
+10. referral contest (wins every month):
+In order to win the contest, a user must invite friends who will add tasks of which 5 tasks will be completed correctly, and perform the friend of a minimum of 10 tasks of other users.
+
+Example:
+Luke invited 4 friends.
+1 friend added a task, but no user performed it correctly. (Luke gets 0 contest point).
+2 friends have done the tasks correctly, but only one friend has done a minimum of 10 tasks of other users. (Luke gets 1 competition point)
+Luke got 1 contest point this month
+
+Mirza invited 3 friends.
+2 friends added a task, but only one friend's task was done correctly by 5 users. (Mirza gets 1 contest point)
+1 friend completed a minimum of 10 tasks of other users correctly. (Mirza gets 1 contest point)
+Mirza earned 2 contest points this month.
+
+Mirza wins this month.
+
+The link to the contest is in the menu after logging in.
+There is information describing the rules of the contest and the top 5 users.
+
+Above the table of the top5 there is a cup with information on which position the user is in.
+
+Below the table is a new table with information on who won the contest in previous months and what prize they won.
+
+
+
+In the admin panel, I set the award:
+Number of coins or material reward.
+
+In the admin panel I set:
+- how many tasks added by a friend must be completed correctly by other users;
+- how many tasks the invited friend must complete correctly.
+
+By email I get information about who won the contest.
+
+I can turn the contest on and off.
+If I don't turn off the contest is automatically added again.
+
+(DONE)
+
+
+
+11 Block the creation of multiple accounts.
+A user can have only one account.
+The system checks the IP, and if a user from that IP has already registered, then the user cannot create a second account again.
+The system also checks the phone number. If such a number already exists then the user cannot register.
+(DONE)
+
+Point 5 is all about:
+
+- User Peter added a task.
+- User Michal completed the task.
+
+User Peter, when accepting or rejecting the task performed by Michael, must write an opinion and give a rating (mark the stars).
+That is, Peter gives an opinion and rating to user Michal.
+
+Michael has the opportunity to respond to the feedback received.
+
+Also, Michael must give a rating and an opinion to Peter, but only after Peter accepts or rejects the task.
+That is, Michael gives an opinion and rating to user Piotr.
+
+Peter can write back to Michael's opinion.
+
+All users of the portal can read the opinion of other users on a new separate rating page for a particular user.
+
+
+
+
+
+
+
+
+Hi.
+I am explaining what is going on with the addition of a screenshot (img 1).
+
+The user Michał is logged in.
+Michal enters and a task such as:
+https://nowy.zlecenio.eu/job-details/25/zarejestruj-sie-i-zainstaluj-aplikacje
+
+Michal can see who added the task along with information about the user how many tasks he added and how many tasks he completed and his rating and feedback.
+
+And the user Michal enters the task he added and sees that the user e.g. zlecenio_eu has completed the task. (img2)
+When he clicks on "Detail", information about the user appears to him (img3).
+
+And on the home page in the module displaying users (I turned it off - I don't remember how to turn it on)
+See this is what it looks like with it turned on:
+https://script.viserlab.com/microlab/ (img4)
+
+Information on how many orders the user has added, how many orders he has completed, how many orders he has rejected, what his overall rating is, the number of positive and negative reviews he has received with the ability to click and read the reviews.
+
+After clicking on the opinion, the user can sort by rating (stars) and by whether the rating was given by the person who added the task or by the person who performed the task.
+
+
+-------------------
+
+smsLab I haven't bought yet, is it possible to set only for users from Poland to work full sms system?
+
+And for users from outside Poland, to have verification done manually?
+
+-------------------
+
+2.ability to hide selected categories and job - visible only after
+login
+
+
+The point here is to add an option on the admin panel side next to the categories to be visible only to logged-in users.
+
+I was unable to do this and hid everything.
+
+By default, categories and tasks appear on the home page.
+
+What I mean is that only selected categories should be on the main page and only from selected categories tasks should be shown to non-logged-in users.
+
+See, this is what the script looks like:
+https://script.viserlab.com/microlab/
+
+So to summarize:
+Non-logged-in people will see the categories that I have selected that are visible to non-logged-in people along with the tasks that are in those categories.
+
+
+
+ALTER TABLE `categories` ADD `is_hidden` TINYINT NULL DEFAULT '0' AFTER `featured`;
+ALTER TABLE `job_posts` ADD `is_hidden` TINYINT NULL DEFAULT '0' AFTER `job_block_status`;
+
+
+
+
+Requirements
+
+1.combination of smsLab with MicroJob (Pending, No SMS Lab account provided)
+
+2.ability to hide selected categories and job - visible only after
+login (Done)
+
+3.adding an affiliate program. a) user gets paid from each
+payment of a referral b) user gets paid from each accepted who
+made a job from a referral. (Done)
+
+4.adding multi categories, that is, the ability to add multiple
+subcategories, e.g.
+Category
+Category 2
+-- Category
+-- -- Category
+-- -- Category 2
+-- -- -- -- Category
+-- -- -- -- Category 2
+... -- -- -- – – -- and so on.
+-- -- Category 3
+-- Category
+Category 3
+... -- -- -- -- and so on. (Done)
+
+
+5.adding the rating of the user who added Job 5a. Adding the
+rating of the user who made the Job 5b. The user can respond to
+the evaluation 5c. All users can read ratings.
+(Done)
+
+6.all users can see how many Job made (accepted) and (rejected)
+and how many Job (added) and how many have been completed
+for user. (Done)
+
+
+7.optional photo when adding Job 7a. Adding a photo by pasting
+the URL. (Done)
+
+8.adding a template sms and email sent to the user who added the
+Job with information about the completed Job. (Done)
+
+9.speeding up the script to make it load faster.
+
+10.competition for:
+(a) referral - the person who invites the most
+active* users in a month wins. *An active user is one who added a
+minimum of 1 Job of which 5 were made and accepted or made a
+minimum of 10 Jobs which were accepted
+b) adding Job - The
+person who adds the most Job of which 10 Job will be accepted
+wins
+c) performing Job - The person who has performed the most
+accepted Job wins. (Done)
+
+
+11.adding blocking the creation of multiple accounts. (DONE)
+
+12.user can open a dispute when he disagrees with the rejection of
+Job, users can talk among themselves. A user can change his mind
+and accept a previously rejected Job. Administrator can also accept
+Job. (Done)
+
+13 The administrator can edit and change the category of added
+Job. (Done)
+
+14.The administrator can block an active Job, and the user cannot
+unblock it. (Done)
+
+15.Administrator can block the selected user from adding Job and
+executing Job. (Done)
+
+
+
+
+
+
+
+
+
+
+https://h19.microhost.pl/phpMyAdmin
+L: srv31316_zlecenioEUnowy
+P: XrXQ8aM3P4NSnsD8kwfX
+
+
+https://nowy.zlecenio.eu/admin/category

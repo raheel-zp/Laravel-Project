@@ -1,0 +1,217 @@
+{
+    "banner": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Banner Section",
+        "content": {
+            "images": {
+                "background_image": {
+                    "size": "1920x1080"
+                },
+                "banner_image": {
+                    "size": "750x600"
+                }
+            },
+            "heading": "text",
+            "subheading": "text",
+            "description": "textarea",
+            "button_text": "text"
+        }
+    },
+    "breadcrumb": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Breadcrumb Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "800x480"
+                }
+            }
+        }
+    },
+
+    "overview": {
+        "builder": true,
+        "name": "Overview Section",
+        "content": {
+            "images": {
+                "background_image": {
+                    "size": "750x600"
+                },
+                "overview_image": {
+                    "size": "500x265"
+                }
+            },
+            "heading_left": "text",
+            "subheading_left": "text",
+            "left_button_text": "text",
+            "left_button_link": "text",
+            "heading_right": "text",
+            "subheading_right": "two",
+            "right_button_text": "text",
+            "right_button_link": "text"
+        }
+    },
+    "get_started": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Get Started",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "button_text": "text",
+            "button_link": "text"
+        }
+    },
+    "counter": {
+        "builder": true,
+        "name": "Counter Section",
+        "element": {
+            "title": "text",
+            "digit": "text",
+            "digit_postfix": "text",
+            "icon": "icon",
+            "modal": true
+        }
+    },
+    "policy_pages": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Policy Pages",
+        "element": {
+            "title": "text",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    },
+    "faq": {
+        "builder": true,
+        "name": "FAQ Section",
+        "element": {
+            "question": "text",
+            "answer": "textarea-nic",
+            "modal": false
+        }
+    },
+    "blog": {
+        "builder": true,
+        "name": "Blog Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        },
+        "element": {
+            "images": {
+                "image": {
+                    "size": "800x600",
+                    "thumb": "410x300"
+                }
+            },
+            "title": "text",
+            "description": "textarea-nic",
+            "modal": false
+        }
+    },
+    "social_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Social Icons",
+        "element": {
+            "title": "text",
+            "icon": "icon",
+            "url": "text",
+            "modal": true
+        }
+    },
+    "contact_us": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Contact Us",
+        "content": {
+            "title": "text",
+            "details": "text"
+        },
+        "element": {
+            "title": "text",
+            "content": "text",
+            "attribute": "text",
+            "icon": "icon",
+            "modal": true
+        }
+    },
+    "top_freelancer": {
+        "builder": true,
+        "name": "Top Freelancer",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "job_category": {
+        "builder": true,
+        "name": "Job Category Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "job_post": {
+        "builder": true,
+        "name": "Job Post Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "login": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Login Page",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "1920x1080"
+                }
+            },
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "register": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Register Page",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "1920x1080"
+                }
+            },
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "footer": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Footer Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "1920x1080"
+                }
+            },
+            "description": "textarea"
+        }
+    },
+    "kyc_content": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Kyc content section",
+        "content": {
+            "unverified_content": "textarea",
+            "pending_content": "textarea"
+        }
+    }
+}
